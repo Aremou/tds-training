@@ -67,12 +67,16 @@
                             <li class="nav-item">
                                 <a class="nav-link" data-bs-toggle="tab" href="#programme">Programmes</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#point-fort">Acquis</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="tab" href="#certification">Certification</a>
-                            </li>
+                            @if ($formation->acquis  != '')
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#acquis">Acquis</a>
+                                </li>
+                            @endif
+                            @if ($formation->certification != '')
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#certification">Certification</a>
+                                </li>
+                            @endif
                         </ul>
 
                         <!-- Tab panes -->
@@ -89,12 +93,16 @@
                             <div class="tab-pane container fade text-justify" id="programme">
                                 {!! $formation->programme !!}
                             </div>
-                            <div class="tab-pane container fade text-justify" id="point-fort">
-                                {!! $formation->points_forts !!}
-                            </div>
-                            <div class="tab-pane container fade text-justify" id="certification">
-                                {!! $formation->certification !!}
-                            </div>
+                            @if ($formation->acquis  != '')
+                                <div class="tab-pane container fade text-justify" id="acquis">
+                                    {!! $formation->acquis !!}
+                                </div>
+                            @endif
+                            @if ($formation->certification  != '')
+                                <div class="tab-pane container fade text-justify" id="certification">
+                                    {!! $formation->certification !!}
+                                </div>
+                            @endif
                         </div>
                         <span class="float-right">Dernière mise à jour: {{ $formation->updated_at }}</span>
                     </div>

@@ -34,8 +34,6 @@ class UpdateFormationFormRequest extends FormRequest
             'objectif' => 'required',
             'prerequis' => 'required',
             'public' => 'required',
-            'points_forts' => 'required',
-            'certification' => 'required',
             'programme' => 'required',
             'categorie' => 'required',
         ];

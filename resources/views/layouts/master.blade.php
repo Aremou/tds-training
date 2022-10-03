@@ -30,17 +30,11 @@
 
     @livewireStyles
 
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
     @yield('style')
 
-    {{-- <style>
-        @yield('css')
-    </style> --}}
-    <!-- =======================================================
-    Theme Name: BizPage
-    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
 
     <style>
         #mobile-nav-toggle i{

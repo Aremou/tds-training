@@ -113,13 +113,12 @@
                                 <button type="button" class="btn m-1 w-100" style="background: #01674e; color:#fff">Demande de d'inscription</button>
                             </a>
                         @else
-                            <button type="button" class="btn m-1 w-100 btn-danger text-whit
-                            e">Clôturée</button>
+                            <button type="button" class="btn m-1 w-100 btn-danger text-white">Fermée</button>
                         @endif
                         <ul class="list-unstyled mt-2">
                             <li><strong class="d-inline-block">Type de formation : </strong> {{ $session_ouverte->type_formation }}</li>
+                            <li><strong class="d-inline-block">Examen  : </strong> {{ $session_ouverte->examen }}</li>
                             <li><strong class="d-inline-block">Certification  : </strong> {{ $session_ouverte->certification }}</li>
-                            <li><strong class="d-inline-block">Composition  : </strong> {{ $session_ouverte->composition }}</li>
                         </ul>
                         <a href="{{ route('root_delocalisation') }}">
                             <button type="button" class="btn m-1 w-100" style="background: #01674e; color:#fff">Contact</button>

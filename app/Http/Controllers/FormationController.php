@@ -50,7 +50,7 @@ class FormationController extends Controller
 
         Mail::to($request->email)->send(new SendMailDemandeDevisParticipant($data));
 
-        Mail::to('sidriz@technodatasolutions.bj')->send(new SendMailDemandeDevisFormateur($data));
+        Mail::to('training@technodatasolutions.bj')->send(new SendMailDemandeDevisFormateur($data));
 
         flashy()->success('Inscription envoyée avec succès');
 

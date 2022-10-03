@@ -26,8 +26,8 @@ class CreateFormationsTable extends Migration
             $table->text('objectif');
             $table->text('prerequis');
             $table->text('public');
-            $table->text('points_forts');
-            $table->text('certification');
+            $table->text('acquis')->nullable();
+            $table->text('certification')->nullable();
             $table->longText('programme');
             $table->foreignId('categorie_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();

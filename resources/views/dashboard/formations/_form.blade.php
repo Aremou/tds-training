@@ -28,9 +28,9 @@
     <label>Niveau</label>
     <select class="form-control" name="niveau" id="">
         <option value="{{ old('niveau') ?? $formation->niveau }}">{{ old('niveau') ?? $formation->niveau }}</option>
-        <option value="debutant">debutant</option>
-        <option value="intermediaire">intermediaire</option>
-        <option value="expert">expert</option>
+        <option value="Debutant">Debutant</option>
+        <option value="Intermediaire">Intermediaire</option>
+        <option value="Expert">Expert</option>
 
     </select>
     {!! $errors->first('niveau', '<p class="error">:message</p>') !!}
@@ -49,9 +49,9 @@
     <label>Type Formation</label>
     <select class="form-control" name="type_formation" id="">
         <option value="{{ old('type_formation') ?? $formation->type_formation }}">{{ old('type_formation') ?? $formation->type_formation }}</option>
-        <option value="presentiel">presentiel</option>
-        <option value="en ligne">en ligne</option>
-        <option value="hybride">hybride</option>
+        <option value="Presentiel">Presentiel</option>
+        <option value="En ligne">En ligne</option>
+        <option value="Hybride">Hybride</option>
     </select>
     {!! $errors->first('type_formation', '<p class="error">:message</p>') !!}
 </div>
@@ -76,9 +76,9 @@
     {!! $errors->first('public', '<p class="error">:message</p>') !!}
 </div>
 <div class="form-group">
-    <label>Points Forts</label>
-    <textarea name="points_forts" id="" cols="30" rows="4" class="elm1 form-control {{ $errors->has('points_forts') ? 'is-invalid' : '' }}">{{ old('points_forts') ?? $formation->points_forts }}</textarea>
-    {!! $errors->first('points_forts', '<p class="error">:message</p>') !!}
+    <label>Acquis</label>
+    <textarea name="acquis" id="" cols="30" rows="4" class="elm1 form-control {{ $errors->has('acquis') ? 'is-invalid' : '' }}">{{ old('acquis') ?? $formation->acquis }}</textarea>
+    {!! $errors->first('acquis', '<p class="error">:message</p>') !!}
 </div>
 <div class="form-group">
     <label>Certification</label>

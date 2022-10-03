@@ -50,7 +50,7 @@
             <div class="col-md-4">
                 <div class="contact-address">
                     <i class="ion-ios-location-outline"></i>
-                    <h3>Addresse</h3>
+                    <h3>Adresse</h3>
                     <address> Akpakpa Sodjèatinmey, lot 112 Immeuble Technodata en face de la SOBEBRA COTONOU BENIN</address>
                 </div>
             </div>

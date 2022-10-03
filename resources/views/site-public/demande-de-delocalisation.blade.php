@@ -48,13 +48,13 @@
             aria-label="breadcrumb">
             <ol class="breadcrumb" style="background: #f7f7f7">
                 <li class="breadcrumb-item"><a class="bread-header" href="#">Accueil</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Demande de devis sur mesure</li>
+                <li class="breadcrumb-item active" aria-current="page">Faites votre demande</li>
             </ol>
         </nav>
         <div class="row mt-5">
             <h2>Demandez un devis sur mesure</h2>
             <p>Laissez-nous un message et notre équipe commerciale vous répondra très rapidement.
-                Vous pouvez également nous contacter par téléphone, du lundi au vendredi de 8h00 à 18h30 au : <span>+229 91 43 55 55</span></p>
+                Contactez nous par téléphone au : <span>+229 91 43 55 55 ou  +229 99 20 06 06</span></p>
             <div class="row">
                 <div class="col-md-12">
                     <form action="">

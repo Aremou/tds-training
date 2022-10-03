@@ -19,7 +19,7 @@
     <link href="{{ asset('dashboard/plugins/datatables/buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Responsive datatable examples -->
 
-    <link href="{{ asset('dashboard/css/jquery-ui.css') }}" rel="stylesheet" type="text/css ">
+    {{-- <link href="{{ asset('dashboard/css/jquery-ui.css') }}" rel="stylesheet" type="text/css "> --}}
 
     <!--calendar css-->
     <link href="{{ asset('dashboard/plugins/fullcalendar/css/fullcalendar.min.css') }}" rel="stylesheet" />

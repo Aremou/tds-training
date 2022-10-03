@@ -3,7 +3,7 @@
 Bonjour {{ $data['prenom'] . " " . $data['nom'] }},
 
 Nous vous remercions d'avoir sollicité TDS pour votre formation.
-L'un de nos conseillers va vous recontacter très rapidement pour vous communiquer les informations souhaitées.
+L'un de nos conseillers vous contactera afin de vous communiquer les informations souhaitées.
 
 <h2>Pour rappel veuillez trouver ci-dessous votre demande :</h2>
 

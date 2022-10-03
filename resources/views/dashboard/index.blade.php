@@ -12,7 +12,6 @@
         <h5 class="page-title">Tableau de bord</h5>
     </div>
 </div>
-
 <div class="row">
     <div class="col-xl-3  col-md-6">
         <div class="card mini-stat m-b-30">

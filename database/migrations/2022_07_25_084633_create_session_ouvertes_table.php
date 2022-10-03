@@ -20,7 +20,7 @@ class CreateSessionOuvertesTable extends Migration
             $table->string('type_formation');
             $table->string('lieu');
             $table->string('certification');
-            $table->string('composition');
+            $table->string('examen');
             $table->date('date_debut');
             $table->date('date_fin');
             $table->foreignId('formation_id')->constrained()->onUpdate('cascade')->onDelete('restrict');

@@ -35,8 +35,8 @@
      x-show="open">
         @if(count($formations) > 0)
         @foreach($formations as $index => $formation)
-            <h4  class="{{ $index === $selectedIndex  ? '' : ''}} "> {{ $formation->nom }}</h4>
-            <p class="{{ $index === $selectedIndex ? '' : '' }}">{{ Str::substr($formation->description, 0, 150) }} {{ Str::length($formation->description) > 70 ? '...' : '' }}<span ></span></p>
+            <h4  class="{{ $index === $selectedIndex  ? 'text-success' : '' }} "> {{ $formation->nom }}</h4>
+            <p class="{{ $index === $selectedIndex ? 'text-success' : '' }}">{{ Str::substr($formation->description, 0, 150) }} {{ Str::length($formation->description) > 70 ? '...' : '' }}<span ></span></p>
         @endforeach
         @else
         <span class=" p-1 ">0 résultat pour "{{ $query }}"</span>

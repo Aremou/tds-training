@@ -14,9 +14,9 @@
     <label>Type Formation</label>
     <select class="form-control" name="type_formation" id="">
         <option value="{{ old('type_formation') ?? $session_ouverte->type_formation }}">{{ old('type_formation') ?? $session_ouverte->type_formation }}</option>
-        <option value="presentiel">presentiel</option>
-        <option value="en ligne">en ligne</option>
-        <option value="hybride">hybride</option>
+        <option value="Presentiel">Presentiel</option>
+        <option value="En ligne">En ligne</option>
+        <option value="Hybride">Hybride</option>
     </select>
     {!! $errors->first('type_formation', '<p class="error">:message</p>') !!}
 </div>
@@ -49,20 +49,16 @@
     <label>Certification</label>
     <select class="form-control" name="certification" id="">
         <option value="{{ old('certification') ?? $session_ouverte->certification }}">{{ old('certification') ?? $session_ouverte->certification }}</option>
-        <option value="oui">oui</option>
-        <option value="non">non</option>
+        <option value="Oui">Oui</option>
+        <option value="Non">Non</option>
     </select>
     {!! $errors->first('certification', '<p class="error">:message</p>') !!}
 </div>
 
 <div class="form-group">
-    <label>Composition</label>
-    <select class="form-control" name="composition" id="">
-        <option value="{{ old('composition') ?? $session_ouverte->composition }}">{{ old('composition') ? old('composition') : ($session_ouverte->composition ? $session_ouverte->composition : '') }}</option>
-        <option value="oui">oui</option>
-        <option value="non">non</option>
-    </select>
-    {!! $errors->first('composition', '<p class="error">:message</p>') !!}
+    <label>Examen</label>
+    <input type="text" class="form-control {{ $errors->has('examen') ? 'is-invalid' : '' }}" value="{{ old('examen') ?? $session_ouverte->examen }}" name="examen">
+    {!! $errors->first('examen', '<p class="error">:message</p>') !!}
 </div>
 
 <button type="reset" class="btn btn-secondary btn-lg waves-effect waves-light">
