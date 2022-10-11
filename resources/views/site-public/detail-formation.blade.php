@@ -30,6 +30,9 @@
     .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
         color: #ea0613 !important;
     }
+    p {
+        text-align: justify;
+    }
 </style>
 
 @endsection
@@ -78,10 +81,10 @@
                                 </li>
                             @endif
                         </ul>
-
                         <!-- Tab panes -->
                         <div class="tab-content p-3 bg-white">
-                            <div class="tab-pane container active text-justify" id="objectif">
+                            <div class="tab-pane container active" style="text-align: justify;
+                            " id="objectif">
                                 {!! $formation->objectif !!}
                             </div>
                             <div class="tab-pane container fade text-justify" id="public">
@@ -121,7 +124,7 @@
                             </a>
                         </form>
                         <p class="my-3">
-                            <b> Type de formation :</b> <br>{{ $formation->type_formation }}
+                            <strong> Type de formation : </strong>{{ $formation->type_formation }}
                         </p>
                         <a href="{{ route('root_delocalisation') }}">
                             <button type="button" class="btn m-1 w-100" style="background: #01674e; color:#fff">Contacter notre service académique</button>

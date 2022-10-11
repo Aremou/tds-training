@@ -27,7 +27,7 @@ class Formation extends Model
         ];
     }
 
-    public $fillable = ['nom', 'slug', 'reference', 'niveau', 'duree', 'lieu', 'type_formation', 'description', 'objectif', 'acquis', 'public', 'points_forts', 'certification', 'programme', 'categorie_id', 'created_at', 'updated_at'];
+    public $fillable = ['nom', 'slug', 'reference', 'niveau', 'duree', 'lieu', 'type_formation', 'description', 'objectif', 'acquis', 'public', 'prerequis', 'points_forts', 'certification', 'programme', 'categorie_id', 'created_at', 'updated_at'];
 
     public function categorie(){
         return $this->belongsTo(Categorie::class);

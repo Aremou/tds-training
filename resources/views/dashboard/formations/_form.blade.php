@@ -56,6 +56,11 @@
     {!! $errors->first('type_formation', '<p class="error">:message</p>') !!}
 </div>
 <div class="form-group">
+    <label>Certification</label>
+    <input type="text" class="colorpicker-rgba form-control {{ $errors->has('certification') ? 'is-invalid' : '' }}" value="{{ old('certification') ?? $formation->certification }}" name="certification">
+    {!! $errors->first('certification', '<p class="error">:message</p>') !!}
+</div>
+<div class="form-group">
     <label>Description</label>
     <textarea name="description" id="" cols="30" rows="4" class="elm1 form-control {{ $errors->has('description') ? 'is-invalid' : '' }}">{{ old('description') ?? $formation->description }}</textarea>
     {!! $errors->first('description', '<p class="error">:message</p>') !!}
@@ -79,11 +84,6 @@
     <label>Acquis</label>
     <textarea name="acquis" id="" cols="30" rows="4" class="elm1 form-control {{ $errors->has('acquis') ? 'is-invalid' : '' }}">{{ old('acquis') ?? $formation->acquis }}</textarea>
     {!! $errors->first('acquis', '<p class="error">:message</p>') !!}
-</div>
-<div class="form-group">
-    <label>Certification</label>
-    <textarea name="certification" id="" cols="30" rows="4" class="elm1 form-control {{ $errors->has('certification') ? 'is-invalid' : '' }}">{{ old('certification') ?? $formation->certification }}</textarea>
-    {!! $errors->first('certification', '<p class="error">:message</p>') !!}
 </div>
 <div class="form-group">
     <label>Programme</label>

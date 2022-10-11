@@ -43,7 +43,6 @@
                         {!! $errors->first('newsletter', '<p class="text-danger">:message</p>') !!}
                     </form>
                 </div>
-
             </div>
         </div>
     </div>

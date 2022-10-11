@@ -29,7 +29,7 @@
         width: 100%;
         text-align:right;
         line-height: 1;
-        margin-top: 22px;
+        margin-top: 10%;
         color: #fff;
         font-weight: bolder;
         font-size: 18px;
@@ -72,6 +72,26 @@
     .accordion-button:not(.collapsed) {
         color: #000 !important;
         background-color: #fff !important;
+    }
+    .card-body{
+        padding: 0rem 1rem;
+        padding-top: 10px;
+
+    }
+    .card-formation {
+        /* overflow: unset !important; */
+    }
+    /* .accordion .card{
+    } */
+    .certification{
+        display:inline-block;
+    }
+    p {
+    display: inline-block;
+    margin-block-start: 1em;
+    /* margin-block-end: 0em; */
+    /* margin-inline-start: 0px; */
+    margin-inline-end: 0px;
     }
 
 </style>
@@ -118,30 +138,38 @@
                     <div id="panelsStayOpen-collapse-{{ $categorie->id }}" style="background-color: #f7f7f7"
                         class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading-{{ $categorie->id }}">
                         <div class="accordion-body">
-                            <div class="row p-0 m-auto">
-                               @foreach (formations($categorie->id) as $formation)
-                                    <div class="card border rounded col-md-3 p-0 mb-3 card-formation" style="height: 325px;">
-                                        <div class="card-header" style="background: linear-gradient(rgba(1, 103, 78, 0.4), rgba(1, 103, 78, 0.4)),url('img/laureat.png')no-repeat;
-                                            -webkit-background-size: cover;
-                                            -moz-background-size: cover;
-                                            -o-background-size: cover;
-                                            background-size: cover; height: 150px">
-                                                    <h3 class="text-center fw-bold card-title-formation" style="color: #fff">{{ $formation->nom }}</h3>
-                                                        <span class="durer">{{ $formation->duree }}</span>
+                            <div class="row">
+                                    @foreach (formations($categorie->id) as $formation)
+                                        <div class="card border rounded col-md-3 p-0 mb-3 card-formation" style="height: 335px;">
+                                            <div class="card-header" style="background: linear-gradient(rgba(1, 103, 78, 0.4), rgba(1, 103, 78, 0.4)),url('img/laureat.png')no-repeat;
+                                                -webkit-background-size: cover;
+                                                -moz-background-size: cover;
+                                                -o-background-size: cover;
+                                                background-size: cover; height: 150px">
+                                                        <h3 class="text-center fw-bold card-title-formation" style="color: #fff">{!! Str::substr($formation->nom, 0, 25) !!} {!! Str::length($formation->nom) > 25 ? '...' : '' !!}</h3>
+                                                            <span class="durer">{{ $formation->duree }}</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="justify-content" style="margin-block-start: 1em; display: inline-block;     margin-block-end: 0em;
+                                                ">
+                                                    <span class="font-weight-bold h6">Niveau : </span>{{ $formation->niveau }}<br>
+                                                    <span class="font-weight-bold h6" style="margin-top:0;">Certification :</span> {{ Str::substr($formation->certification, 0, 23) }} {{ Str::length($formation->certification) > 23 ? '...' : '' }} <br>
+
+                                                    {{-- <?php
+                                                    echo $formation->certification;
+
+                                                    ?>
+                                                    <br> --}}
+                                                    <span class="font-weight-bold h6">Référence :</span> {{ $formation->reference }}
+                                                </p>
+                                                <a href="{{ route('root_detail_formations', [$categorie->slug, $formation->slug])}}" class="btn rounded-pill btn_plus float-right mt-3">En savoir plus <i
+                                                    class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="card-body">
-                                            <p class="text-justify">
-                                                <span class="font-weight-bold h6">Niveau : </span> <span class="">{{ $formation->niveau }} </span><br>
-                                                <span class="font-weight-bold h6">Certification :</span> <span class="">{!! Str::substr($formation->certification, 0, 40) !!} {!! Str::length($formation->certification) > 40 ? '...' : '' !!}</span>
-                                            </p>
-                                            <span class="font-weight-bold h6">Référence :</span> <span class="">{{ $formation->reference }}</span>
-                                            <a href="{{ route('root_detail_formations', [$categorie->slug, $formation->slug])}}" class="btn rounded-pill btn_plus float-right mt-2">En savoir plus <i
-                                                class="fa fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                               @endforeach
+                                    @endforeach
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
                @endforeach

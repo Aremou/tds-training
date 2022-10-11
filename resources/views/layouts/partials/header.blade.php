@@ -8,7 +8,9 @@
             {{-- <h1><a href="#intro" class="scrollto font-italic"> rmi </a></h1> --}}
 
             <!-- Uncomment below if you prefer to use an image logo -->
-            <a href=""><img src="{{asset('img/logo.png')}}" style="width:150px; margin-top : -22px" alt="" title="" /></a>
+            <a href="{{ route('root_accueil_site') }}">
+                <img src="{{asset('img/logo.png')}}" style="width:150px; margin-top : -22px" alt="" title="" />
+            </a>
         </div>
 
         <nav id="nav-menu-container">
